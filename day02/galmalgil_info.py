@@ -29,8 +29,8 @@ def getRequestUrl(url):
 def getGalmatgilInfo():
     service_url = 'http://apis.data.go.kr/6260000/fbusangmgcourseinfo/getgmgcourseinfo'   #https --> http 로 변경함.
     params =f'?serviceKey={serviceKey}'#공백안돼
-    params += '&numOfRows=10'          ##공백안돼
-    params += '&pageNo=1'
+    params += '&numOfRows=10'          # 줄 10개식 한 페이지당 
+    params += '&pageNo=1'               # 페이지 갯수
     params += '&resultType=json'       #공백안돼
     url = service_url + params
 
