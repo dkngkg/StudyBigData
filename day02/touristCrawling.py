@@ -1,6 +1,7 @@
 
-
+# 한국어확장버전/거ㅓㅏㄺㄹ
 # # setting  폴더 : ctrl +"  ,  "  
+
 
 # ## 데이터 포털 API 크롤링
 # # 단축키 : shift + DELETE : 한줄씩 사라진다.
@@ -77,31 +78,10 @@ def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
                 natName = natName.replace(' ', "")       #"중  국 ""  띄어쓰기 제거
                 ed = jsonData['response']['body']['items']['item']['ed']
 
-                jsonResult.append({'nat_name': natName, 'nat_cd': nat_cd,
-                                 'yyyymm': yyyymm, 'visit_cnt': num})
+                jsonResult.append({'nat_name': natName, 'nat_cd': nat_cd,'yyyymm': yyyymm, 'visit_cnt': num})
                 result.append([natName, nat_cd, yyyymm, num])
                 
     return (jsonResult, result, natName, ed, dataEnd)
-
-
-  
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 def main():
@@ -119,20 +99,24 @@ def main():
     nEndYear = int(input('데이터를 몇년까지 수집할까요? '))
     ed_cd = 'E' # D : 방한외래관광객 , E : 방한외국인
 
-    (jsonResult, result, natName, ed, dataEnd =getTourismStatsService(nat_cd,
+    (jsonResult, result, natName, ed, dataEnd) = \
+        getTourismStatsService(nat_cd,
                                             ed_cd, nStartYear, nEndYear) #[CODE 3])
 
-if (natName=='') : #URL 요청은 성공하였지만, 데이터 제공이 안된 경우
+    if natName =='' : #URL 요청은 성공하였지만, 데이터 제공이 안된 경우
         print('데이터가 전달되지 않았습니다. 공공데이터포털의 서비스 상태를 확인하기 바랍니다.')
     else:
-        #파일저장 1 : json 파일       
-        with open('./%s_%s_%d_%s.json' % (natName, ed, nStartYear, dataEND), 'w', 
-                    encoding='utf8') as outfile:
+        
+        #파일저장 1 :csv파일       
+        columns = ["입국자국가", "국가코드", "입국연월", "입국자 수"]
+        result_df = pd.DataFrame(result, columns = columns)
+        result_df.to_csv(f'/{natName}_{ed}_{nStartYear}_{dataEnd}.csv', index = False,  encoding='cp949')
+        
+        print('csv 파일 저장완료 ! ')
 
 
 
 
-    
 
 
 if __name__ == '__main__':
