@@ -31,11 +31,12 @@ Django 사용해도됨.
  - beautifulsoup
  - Selenium
 
-- 빅데이터분석
- - 통계분석
+
 
 ## Day 4
-
+- 빅데이터분석
+ - 통계분석
+ - 상관분석
 
 ## Day 5
 
