@@ -52,4 +52,10 @@ Django 사용해도됨.
   ## PyQT 1
 
   -PyQt5 학습
-    -  
+    - PyQt5, Designer 설치
+    - PyQt5 기본폼 만들기
+
+  ## PyQt 2
+  - PyQt5, 학습
+    - QtDesigner로 UI 생성
+    - 네이버 API로 네이버 뉴스, 영화 검색앱 만들기

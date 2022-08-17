@@ -22,7 +22,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>네이버뉴스 검색</string>
+   <string>네이버영화 검색</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -31,7 +31,7 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>30</x>
      <y>10</y>
      <width>681</width>
      <height>141</height>
@@ -63,22 +63,22 @@
      </rect>
     </property>
    </widget>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>23</x>
-     <y>60</y>
-     <width>51</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>검색어</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>영화제목</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+    </property>
+   </widget>
   </widget>
   <widget class="QTableWidget" name="tblResult">
    <property name="geometry">
