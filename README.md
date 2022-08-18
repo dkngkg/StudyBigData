@@ -59,3 +59,7 @@ Django 사용해도됨.
   - PyQt5, 학습
     - QtDesigner로 UI 생성
     - 네이버 API로 네이버 뉴스, 영화 검색앱 만들기
+    
+  ## PyQt 3 
+  - 네이버 영화 검색앱 만들기 링크 https://github.com/dkngkg/StudyBigData/tree/main/pyqt03
+  ![0818 네이버 뉴스 크롤링 결과화면](https://user-images.githubusercontent.com/108312616/185273769-4c22f71f-6b45-49a7-9e7a-7d48528c295d.JPG)
